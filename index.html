@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <title>HTML - Guia</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <header id="top">
+            <h1>HyperText Markup Language</h1>
+            <hr>
+        </header>
+
+        <div id="index">
+            <ol>
+                <li><a href="#html">O que é HTML?</a></li>
+                <li><a href="#structure">Estrutura básica</a></li>
+                <li>
+                    <a href="#tags">Tags</a>
+                    <ol type="i">
+                        <li><a href="#text">Texto</a></li>
+                        <li><a href="#list">Lista</a></li>
+                        <li><a href="#link">Links</a></li>
+                        <li><a href="#image-index">Imagem</a></li>
+                    </ol>
+                </li>
+                <li><a href="#references">Referências</a></li>
+            </ol>
+        </div>
+
+            <div id="html">
+                <div>
+                    <h2>O que é <abbr title="HyperText Markup Language">HTML</abbr>?</h2>
+                    <p><abbr title="HyperText Markup Language">HTML</abbr> é a linguagem usada para criar e estruturar páginas web. Utiliza elementos representados por tags, para formatar o texto, criar links, inserir imagens, e outras funcionalidades.</p>
+                </div>
+                <div>
+                    <h3>Como funciona?</h3>
+                    <p>É um conjunto de elementos que você usa para marcar e organizar diferentes partes do conteúdo para que elas apareçam ou funcionem de uma maneira específica. Cada elemento HTML é representado por uma tag. As tags geralmente vêm em pares, uma de abertura <tag> e uma de fechamento </tag>, e elas marcam o início e o fim do elemento.</p>
+                </div>
+            </div>
+
+            <div id="structure">
+                <h2>Estrutura básica</h2>
+                <ol>
+                    <li><code>&lt;!DOCTYPE html&gt;</code>: Indica que o documento está usando HTML5.</li>
+                    <li><code>&lt;html lang="pt-BR"&gt;</code>: Envolve todo o conteúdo da página e define o idioma como português brasileiro.</li>
+                    <li>
+                        <code>&lt;head&gt;</code>: Contém metadados (informações sobre o documento).
+                        <ul>
+                            <li><code>&lt;meta charset="UTF-8"&gt;</code>: Define a codificação de caracteres.</li>
+                            <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>: Ajusta a visualização para dispositivos móveis.</li>
+                            <li><code>&lt;title&gt;</code>: Define o título da página que aparece na aba do navegador.</li>
+                        </ul>
+                    </li>
+                    <li><code>&lt;body&gt;</code>: Contém todo o conteúdo visível da página.</li>
+                </ol>
+                <div id="structure-image">
+                    <img src="img/basicStructureImg.png" alt="Imagem com código de estrutura básica HTML" title="Estrutura básica HTML">
+                </div>
+            </div>
+
+            <div id="tags">
+                <h2>Tags</h2>
+                <h3 id="text">Texto</h3>
+                <ul>
+                    <li><code>&lt;h1&gt;</code> até <code>&lt;h6&gt;</code>: Usadas para definir cabeçalhos. &lt;h1&gt; é o mais importante e maior, enquanto &lt;h6&gt; é o menor e menos importante.</li>
+                    <li><code>&lt;p&gt;</code>: Define um parágrafo de texto.</li>
+                    <li><code>&lt;mark&gt;</code>: Destaca o texto como se estivesse marcado com um marcador.</li>
+                    <li><code>&lt;small&gt;</code>: Indica texto pequeno.</li>
+                    <li><code>&lt;i&gt;</code>: Define texto em itálico.</li>
+                    <li><code>&lt;u&gt;</code>: Define texto sublinhado.</li>
+                    <li><code>&lt;strong&gt;</code>: Define texto importante, geralmente exibido em negrito.</li>
+                    <li><code>&lt;sub&gt;</code>: Define texto subscrito.</li>
+                    <li><code>&lt;sup&gt;</code>: Define texto sobrescrito.</li>
+                    <li><code>&lt;blockquote&gt;</code>: Define uma seção que foi citada de outra fonte.</li>
+                    <li><code>&lt;abbr&gt;</code>: Define abreviações ou acrônimos. Nessa tag é utilizado o atributo "title" que indica o nome completo da abreviação que será exibido quando o mouse está em cima do texto.</li>
+                    <li><code>&lt;hr&gt;</code>: Insere uma linha horizontal, geralmente usada para separar conteúdo. Ela é uma tag autoencerrada, ou seja, não tem tag para fechamento.</li>
+                </ul>
+                <h3 id="list">Lista</h3>
+                <ul>
+                    <li><code>&lt;ol&gt;</code>: Define uma lista ordenada.</li>
+                    <li><code>&lt;ul&gt;</code>: Define uma lista não ordenada.</li>
+                    <li><code>&lt;li&gt;</code>: Define um item de lista.</li>
+                </ul>
+                <p>Em listas ordenadas (<code>&lt;ol&gt;</code>) é possível utilizar o atributo <strong>"type"</strong> que altera como será exibido os números que ordenam a lista.</p>
+                <p>OBS.: Só é possível alterar o ícone de listas não ordenadas (<code>&lt;ul&gt;</code>) por meio de CSS.</p>
+                <h3 id="link">Link</h3>
+                <ul>
+                    <li><code>&lt;a&gt;</code>: Define um hyperlink, usado para vincular a outra página ou recurso.</li>
+                </ul>
+                <p>A tag <code>&lt;a&gt;</code> tem os seguintes atributos:</p>
+                <ul>
+                    <li><strong>"href" (obrigatório)</strong>: Define o destino do link. Pode ser uma URL ou um caminho de arquivo.</li>
+                    <li>
+                        <strong>"target"</strong>: Define onde o link será aberto. Os mais utilizados são:
+                        <ul>
+                            <li><strong>"_self" (padrão)</strong>: Abre o link na mesma aba/janela. </li>
+                            <li><strong>"_blank"</strong>: Abre o link em uma nova aba/janela.</li>
+                        </ul>
+                    </li>
+                    <li><strong>"title"</strong>: Informa um texto que aparece quando o usuário passa o mouse sobre o link.</li>
+                </ul>
+                <h3 id="image-index">Imagem</h3>
+                <ul>
+                    <li>
+                        <code>&lt;img&gt;</code>: Adiciona uma imagem à página HTML. Ela é uma tag autoencerrada. Os principais atributos dessa tag são:
+                        <ul>
+                            <li><strong>"src" (obrigatório)</strong>: Especifica o caminho da imagem. Pode ser uma URL ou um caminho de arquivo.</li>
+                            <li><strong>"alt" (obrigatório pela acessibilidade)</strong>: Informa um texto alternativo que descreve a imagem. Esse texto é exibido se a imagem não puder ser carregada e é utilizado para leitores de tela, ajudando na acessibilidade.</li>
+                            <li><strong>"title"</strong>: Informa um texto que aparece quando o usuário passa o mouse sobre o link.</li>
+                            <li><strong>"width"</strong> e <strong>"height"</strong>: Definem a largura e a altura da imagem em pixels.</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+
+            <div id="references">
+                <h2>Referências</h2>
+                <ul>
+                    <li><a href="https://developer.mozilla.org/pt-BR/" target="_blank">MDN Web Docs</a></li>
+                    <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                    <li><a href="https://html.com/" target="_blank">HTML.com</a></li>
+                </ul>
+            </div>
+        <a href="#top" class="back-to-top">Voltar ao início</a>
+    </div>
+
+</body>
+</html>
